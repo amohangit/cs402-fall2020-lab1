@@ -1,0 +1,30 @@
+% Add the honor code statement here. 
+% Comments are added in Latex using the percentage sign. 
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{document}
+\begin{center} \Large{\textbf{Single Vs Multiple Thread Comparison Report \\ Prepared by: Professor Mohan}} \end{center}
+\hrule
+\section{\textbf{Summary}}
+Add your summary here..
+\section{\textbf{Charts}}
+\begin{tikzpicture}
+\begin{axis}[
+	title={\hspace{-0.5in} \textbf{(a) Counting primes between 0 and 1000000}},
+	scaled ticks=false, tick label style={/pgf/number format/fixed},
+    symbolic x coords={1,2,5,10},
+    xtick={1,2,5,10},
+    xticklabels={1,2,5,10},
+    xlabel=\textbf{Number of threads},
+    ylabel=\textbf{Time}]
+    \addplot[ybar,fill=blue!45] coordinates {
+        (1,40343)
+        (2,29927)
+        (5,16459)
+        (10,12342)
+    };
+\end{axis}
+\end{tikzpicture}
+\end{document}
